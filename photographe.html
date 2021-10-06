@@ -6,7 +6,7 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="stylesheet" href="./css/photographe-page.css">
      <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
-     <title></title>
+     <title>Page photographe</title>
 </head>
 <body class="body">
      <section class="main">
@@ -36,7 +36,7 @@
 
           <div class="tri-container">
                <p class="tri-recherche">Trier par</p>
-               <select id="select" aria-label="trier les medias">
+               <select id="select" aria-label="trier les medias" label="trier les medias">
                     <option class="option" aria-label="Popularité">Popularité</option>
                     <option class="option" aria-label="Date">Date</option>
                     <option class="option" aria-label="Titre">Titre</option>
@@ -53,27 +53,27 @@
      </section>
      <section class="form-modal" id="modal"> 
           <form>
-               <a href="#" class="form-close"><i class="fas fa-times"></i></a>
+               <a href="#" class="form-close"><i alt="fermeture du modal" class="fas fa-times"></i></a>
                <h5 class="form-titre"></h5>
                <label class="form-label" for="input-prenom" aria-label="prenom">
                     Prenom
                </label>
-               <input class="form-input" type="text" id="input-prenom">
+               <input class="form-input" type="text" id="input-prenom" required>
 
                <label class="form-label" for="input-nom" aria-label="nom">
                     Nom
                </label>
-               <input class="form-input" type="text" id="input-nom">
+               <input class="form-input" type="text" id="input-nom" required>
 
                <label class="form-label" for="input-mail" aria-label="email">
                     Email
                </label>
-               <input class="form-input" id="input-mail" type="mail">
+               <input class="form-input" id="input-mail" type="mail" required>
 
                <label class="form-label" for="input-msg" aria-label="message" >
                     Message
                </label>
-               <input class="form-input form-input-msg" id="input-msg" type="text">
+               <input class="form-input form-input-msg" id="input-msg" type="text" required>
                
                <button id="submit" class="form-submit" type="submit" aria-label="envoyer">Envoyer</button>
           </form>
@@ -86,10 +86,10 @@
           <div class="mySlides">
                <a href="#" class="prev" aria-label="Media précedent">&#10094;</a>
                <div class="lightbox-container-img">
-                    <img src="" id="currentSlideImg">
+                    <img src="" alt="image de la lightbox" id="currentSlideImg">
                </div>
                <div class="lightbox-container-video">
-                    <video src="" id="currentSlideVideo" controls autoplay></video>
+                    <video src="" alt="Vidéo de la lightbox" id="currentSlideVideo" controls autoplay></video>
                </div>
                <a href="#" class="next" aria-label="Media suivant">&#10095;</a>
           </div>
