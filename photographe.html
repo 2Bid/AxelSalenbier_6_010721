@@ -30,13 +30,13 @@
                </div>
                <!-- RIGHT -->
                <div class="photographe-img-container">
-                    <img class="photographe-img" alt="Photos du photographe">
+                    <img class="photographe-img" alt="Photos du photographe" src="//:0">
                </div>
           </section>
 
           <div class="tri-container">
                <p class="tri-recherche">Trier par</p>
-               <select id="select" aria-label="trier les medias" label="trier les medias">
+               <select id="select" aria-label="trier les medias">
                     <option class="option" aria-label="Popularité">Popularité</option>
                     <option class="option" aria-label="Date">Date</option>
                     <option class="option" aria-label="Titre">Titre</option>
@@ -53,7 +53,7 @@
      </section>
      <section class="form-modal" id="modal"> 
           <form>
-               <a href="#" class="form-close"><i alt="fermeture du modal" class="fas fa-times"></i></a>
+               <a href="#" class="form-close"><i class="fas fa-times"></i></a>
                <h5 class="form-titre"></h5>
                <label class="form-label" for="input-prenom" aria-label="prenom">
                     Prenom
@@ -68,7 +68,7 @@
                <label class="form-label" for="input-mail" aria-label="email">
                     Email
                </label>
-               <input class="form-input" id="input-mail" type="mail" required>
+               <input class="form-input" id="input-mail" type="email" required>
 
                <label class="form-label" for="input-msg" aria-label="message" >
                     Message
@@ -86,10 +86,10 @@
           <div class="mySlides">
                <a href="#" class="prev" aria-label="Media précedent">&#10094;</a>
                <div class="lightbox-container-img">
-                    <img src="" alt="image de la lightbox" id="currentSlideImg">
+                    <img src="//:0" alt="image de la lightbox" id="currentSlideImg">
                </div>
                <div class="lightbox-container-video">
-                    <video src="" alt="Vidéo de la lightbox" id="currentSlideVideo" controls autoplay></video>
+                    <video src="//:0" id="currentSlideVideo" controls autoplay></video>
                </div>
                <a href="#" class="next" aria-label="Media suivant">&#10095;</a>
           </div>
@@ -98,6 +98,6 @@
           <div class="numbertext"></div>
      </div>
    </div>
+   <script src="./dist/photographe.bundle.js"></script>
 </body>
-<script src="./dist/photographe.bundle.js"></script>
 </html>
