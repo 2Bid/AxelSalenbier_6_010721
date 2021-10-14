@@ -41,6 +41,29 @@ body{
      margin: auto;
 }
 
+.discover{
+     display: none;
+     background-color: var(--back-color);
+     font-weight: bold;
+     padding: 5px 10px;
+     border-radius: 15px;
+}
+.discover-container{
+     width: 100%;
+     z-index: 5;
+     text-align: center;
+     margin-top: 5px;
+     position: fixed;
+}
+.discover a {
+     text-decoration: none;
+     color: black;
+}
+
+.visible{
+     display: inline-block;
+}
+
 header{
      display: inline-block;
      margin: 0 30px;

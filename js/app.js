@@ -50,3 +50,16 @@ tag.forEach((el) => {
     affichagefiltre(tagActuel);
   });
 });
+
+/* Languette au scroll */
+
+const discover = document.querySelector('.discover');
+
+window.addEventListener('scroll', (e) => {
+  e.preventDefault();
+  if ((window.scrollY >= 10)) {
+    discover.classList.add('visible');
+  } else if ((window.scrollY <= 10)) {
+    discover.classList.remove('visible');
+  }
+});
