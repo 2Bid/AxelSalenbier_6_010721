@@ -54,6 +54,7 @@ const openLightbox = async (media) => {
   result = await getMediaByPhotographer(media.photographerId);
   const lightbox = document.querySelector('.lightbox');
   const main = document.querySelector('.main');
+  lightbox.setAttribute('aria-hidden', 'false');
   lightbox.className = 'active lightbox';
   if (lightbox.classList.contains('active')) {
     main.classList.add('opacitydown');
@@ -84,6 +85,7 @@ const closebtn = document.querySelector('.close');
 const main = document.querySelector('.main');
 closebtn.addEventListener('click', () => {
   lightbox.classList.remove('active');
+  lightbox.setAttribute('aria-hidden', 'true');
   main.classList.remove('opacitydown');
 });
 

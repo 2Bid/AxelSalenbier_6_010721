@@ -36,7 +36,7 @@
 
           <div class="tri-container">
                <label for="select" class="tri-recherche">Trier par</label>
-               <select id="select" aria-label="trier les medias">
+               <select id="select" aria-label="trier les medias" role="listitem">
                     <option class="option" aria-label="Popularité">Popularité</option>
                     <option class="option" aria-label="Date">Date</option>
                     <option class="option" aria-label="Titre">Titre</option>
@@ -44,59 +44,61 @@
           </div>
 
 
-         <section class="media-container"></section>
+         <section class="media-container" aria-labelledby="Contenus visuel"></section>
 
          <aside class="languette-info">
               <p class="total-like"></p>
               <p class="prix"></p>
          </aside>
      </section>
-     <section class="form-modal" id="modal"> 
-          <form>
-               <a href="#" class="form-close"><strong class="fas fa-times"></strong></a>
+
+     <!-- FORMULAIRE DE CONTACT -->
+     <section class="form-modal" id="modal" aria-hidden="true"> 
+          <form aria-labelledby="formulaire de contact">
+               <a href="#" class="form-close" role="button" aria-roledescription="Bouton de fermeture"><strong class="fas fa-times"></strong></a>
                <h5 class="form-titre"></h5>
                <label class="form-label" for="input-prenom" aria-label="prenom">
                     Prenom
                </label>
-               <input class="form-input" type="text" id="input-prenom" required>
+               <input class="form-input" type="text" id="input-prenom" placeholder="Votre Pénom" required>
 
                <label class="form-label" for="input-nom" aria-label="nom">
                     Nom
                </label>
-               <input class="form-input" type="text" id="input-nom" required>
+               <input class="form-input" type="text" id="input-nom" placeholder="Votre Nom" required>
 
                <label class="form-label" for="input-mail" aria-label="email">
                     Email
                </label>
-               <input class="form-input" id="input-mail" type="email" required>
+               <input class="form-input" id="input-mail" type="email" placeholder="Votre-adresse-email@gmail.com" required>
 
                <label class="form-label" for="input-msg" aria-label="message" >
                     Message
                </label>
-               <input class="form-input form-input-msg" id="input-msg" type="text" required>
+               <input class="form-input form-input-msg" id="input-msg" placeholder="Votre message" type="text" required>
                
-               <button id="submit" class="form-submit" type="submit" aria-label="envoyer">Envoyer</button>
+               <button id="submit" class="form-submit" type="submit" aria-roledescription="soumettre le formulaire" role="button">Envoyer</button>
           </form>
     </section>
 
      <!-- LIGHTBOX -->
-    <div id="lightboxl" class="lightbox">
-     <a href="#" class="close cursor" aria-label="Fermeture">&times;</a>
-     <div class="modal-content">
-          <div class="mySlides">
-               <a href="#" class="prev" aria-label="Media précedent">&#10094;</a>
-               <div class="lightbox-container-img">
-                    <img src="//:0" alt="image de la lightbox" id="currentSlideImg">
+    <div id="lightboxl" class="lightbox" aria-hidden="true">
+          <a href="#" class="close cursor" role="button" aria-roledescription="Bouton pour fermer le modal">&times;</a>
+          <div class="modal-content">
+               <div class="mySlides">
+                    <a href="#" class="prev" role="button" aria-label="Media précedent">&#10094;</a>
+                    <div class="lightbox-container-img">
+                         <img src="//:0" alt="image de la lightbox" id="currentSlideImg">
+                    </div>
+                    <div class="lightbox-container-video">
+                         <video src="//:0" id="currentSlideVideo" controls autoplay></video>
+                    </div>
+                    <a href="#" class="next" role="button" aria-label="Bouton pour afficher le media suivant">&#10095;</a>
                </div>
-               <div class="lightbox-container-video">
-                    <video src="//:0" id="currentSlideVideo" controls autoplay></video>
-               </div>
-               <a href="#" class="next" aria-label="Media suivant">&#10095;</a>
+     
+               <div class="media-titre"></div>
+               <div class="numbertext"></div>
           </div>
-   
-          <div class="media-titre"></div>
-          <div class="numbertext"></div>
-     </div>
    </div>
    <script src="./dist/photographe.bundle.js"></script>
 </body>

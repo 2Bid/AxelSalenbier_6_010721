@@ -51,8 +51,7 @@ tag.forEach((el) => {
   });
 });
 
-/* Languette au scroll */
-
+/* Discover element appear on scroll */
 const discover = document.querySelector('.discover');
 
 window.addEventListener('scroll', (e) => {

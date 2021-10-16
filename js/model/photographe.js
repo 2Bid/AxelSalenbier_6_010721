@@ -11,6 +11,8 @@ export default class Photographe {
     this.portrait = portrait;
 
     this.createPhotographe = () => new Photographe();
+
+    // update photographe page details infos
     document.title = `Profil de ${this.name}`;
     document.getElementsByClassName('photographe-name')[0].innerText = this.name;
     document.getElementsByClassName(

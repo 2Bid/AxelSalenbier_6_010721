@@ -120,12 +120,14 @@ btnOpenModal.addEventListener('click', (e) => {
   e.preventDefault();
   window.scrollTo(0, 0);
   modal.style.display = 'block';
+  modal.setAttribute('aria-hidden', 'false');
   main.classList.add('opacitydown');
 });
 
 submitButton.addEventListener('click', (e) => {
   e.preventDefault();
   modal.style.display = 'none';
+  modal.setAttribute('aria-hidden', 'true');
   main.classList.remove('opacitydown');
 });
 
@@ -133,5 +135,6 @@ submitButton.addEventListener('click', (e) => {
 croix.addEventListener('click', (e) => {
   e.preventDefault();
   modal.style.display = 'none';
+  modal.setAttribute('aria-hidden', 'true');
   main.classList.remove('opacitydown');
 });
