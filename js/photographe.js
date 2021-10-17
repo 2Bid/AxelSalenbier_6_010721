@@ -54,7 +54,6 @@ function afficheMedias() {
 function triPopularite() {
   const mediasGlobal = medias.sort((media1, media2) => media2.likes - media1.likes);
   afficheMedias(mediasGlobal);
-  console.log(mediasGlobal);
 }
 
 async function affichage(id) {
