@@ -69,6 +69,7 @@ h4{
 }
 a{
      text-decoration: none;
+     color: inherit;
 }
 
 .photographe-img-container{
@@ -153,16 +154,19 @@ select{
 }
 
 .media-infos{
-     color: var(--main-color);
+     color: var(--main-color) !important;
      display: flex;
      justify-content: space-between;
      padding-top: 10px;
 }
 
+.media-infos h4{
+     width: 80%;
+}
+
 .media-infos i{
      margin-left: 10px;
 }
-
 
 .languette-info{
      position: fixed;

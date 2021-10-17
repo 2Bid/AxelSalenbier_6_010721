@@ -2,12 +2,12 @@
 import openLightbox from './lightbox';
 
 export default class MediaVideo {
-  constructor(data) {
-    this.content = this.video(data);
+  constructor(data, handleLikeChange) {
+    this.content = this.video(data, handleLikeChange);
   }
 
   // create video media
-  video(data) {
+  video(data, handleLikeChange) {
     this.params = data;
     const mediaVideo = document.createElement('article');
     mediaVideo.className = 'media';
@@ -29,7 +29,21 @@ export default class MediaVideo {
     const titre = document.createElement('h4');
     titre.innerHTML = this.params.title;
     const like = document.createElement('span');
-    like.innerHTML = `${this.params.likes}<i class="fas fa-heart"></i>`;
+    const datalike = document.createElement('span');
+    datalike.innerText = this.params.likes;
+    const coeurcontainer = document.createElement('a');
+    coeurcontainer.href = '#';
+    const coeur = document.createElement('i');
+    coeur.className = 'fas fa-heart';
+    coeurcontainer.addEventListener('click', (e) => {
+      e.preventDefault();
+      this.params.likes += 1;
+      datalike.innerText = this.params.likes;
+      handleLikeChange();
+    });
+    coeurcontainer.appendChild(coeur);
+    like.appendChild(datalike);
+    like.appendChild(coeurcontainer);
     video.addEventListener('click', () => { openLightbox(this.params); window.scrollTo(0, 0); });
     video.setAttribute('controls', 'true');
     videoContainer.appendChild(video);

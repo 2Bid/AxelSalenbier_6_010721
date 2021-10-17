@@ -54,6 +54,7 @@ const openLightbox = async (media) => {
   result = await getMediaByPhotographer(media.photographerId);
   const lightbox = document.querySelector('.lightbox');
   const main = document.querySelector('.main');
+  const btn = document.querySelector('.close');
   lightbox.setAttribute('aria-hidden', 'false');
   lightbox.className = 'active lightbox';
   if (lightbox.classList.contains('active')) {
@@ -63,6 +64,7 @@ const openLightbox = async (media) => {
   }
   showSlides(media);
   showMedias(media);
+  btn.focus();
 };
 
 /**
@@ -81,8 +83,8 @@ const openLightbox = async (media) => {
 
 // close lightbox
 const lightbox = document.querySelector('.lightbox');
-const closebtn = document.querySelector('.close');
 const main = document.querySelector('.main');
+const closebtn = document.querySelector('.close');
 closebtn.addEventListener('click', () => {
   lightbox.classList.remove('active');
   lightbox.setAttribute('aria-hidden', 'true');

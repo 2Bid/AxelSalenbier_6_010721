@@ -52,8 +52,9 @@ function afficheMedias() {
 
 // sort by like
 function triPopularite() {
-  const mediasGlobal = medias.sort((media1, media2) => media1.likes > media2.likes);
+  const mediasGlobal = medias.sort((media1, media2) => media2.likes - media1.likes);
   afficheMedias(mediasGlobal);
+  console.log(mediasGlobal);
 }
 
 async function affichage(id) {
@@ -122,6 +123,7 @@ btnOpenModal.addEventListener('click', (e) => {
   modal.style.display = 'block';
   modal.setAttribute('aria-hidden', 'false');
   main.classList.add('opacitydown');
+  croix.focus();
 });
 
 submitButton.addEventListener('click', (e) => {

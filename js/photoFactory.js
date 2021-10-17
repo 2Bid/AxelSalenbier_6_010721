@@ -34,15 +34,19 @@ export default class MediaPhoto {
     const like = document.createElement('span');
     const datalike = document.createElement('span');
     datalike.innerText = this.params.likes;
+    const coeurcontainer = document.createElement('a');
+    coeurcontainer.href = '#';
     const coeur = document.createElement('i');
     coeur.className = 'fas fa-heart';
-    coeur.addEventListener('click', () => {
+    coeurcontainer.addEventListener('click', (e) => {
+      e.preventDefault();
       this.params.likes += 1;
       datalike.innerText = this.params.likes;
       handleLikeChange();
     });
+    coeurcontainer.appendChild(coeur);
     like.appendChild(datalike);
-    like.appendChild(coeur);
+    like.appendChild(coeurcontainer);
     imgcontainer.appendChild(img);
     mediaInfo.appendChild(titre);
     mediaInfo.appendChild(like);
