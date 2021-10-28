@@ -15,7 +15,7 @@ export default class MediaPhoto {
     imgcontainer.className = 'img-container';
     imgcontainer.href = '#';
     const img = document.createElement('img');
-    const name = document.getElementsByClassName('photographe-name')[0].outerText;
+    const name = document.getElementsByClassName('photographe-name')[0].textContent;
     // ELie-Rose -> enlever le tirer
     const namesplit = name.split(' ')[0];
     if (namesplit == 'Ellie-Rose') {
