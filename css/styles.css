@@ -4,6 +4,12 @@
      --font-gray : #525252;
 }
 
+*, ::before, ::after {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+ }
+
 .tags{
      border-radius: 20px;
      border: 1px solid var(--font-gray);
@@ -46,7 +52,7 @@ body{
      background-color: var(--back-color);
      font-weight: bold;
      padding: 5px 10px;
-     border-radius: 15px;
+     border-radius: 10px;
 }
 .discover-container{
      width: 100%;
@@ -65,14 +71,18 @@ body{
 }
 
 header{
-     display: inline-block;
-     margin: 0 30px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 0 30px;
+     margin-top: 20px;
+     width: 70%;
 }
 h1{
      display: inline-block;
 }
 nav{
-     display: inline;
+     display: inline-block;
 }
 nav ul{
      display: inline-flex;
@@ -80,17 +90,20 @@ nav ul{
      flex-wrap: wrap;
 }
 main{
-     display: inline;
+     display: block;
 }
 .main-titre{
      display: inline-block;
-     margin: 30px;
+     position: absolute;
+     right: 20px;
+     top: 20px;
+     margin: 30px 0;
      color: var(--main-color)
 }
 .article-container{
  display: flex;
  flex-wrap: wrap;
- margin-top: 100px;
+ margin-top: 60px;
 }
 
 .article{
@@ -128,21 +141,38 @@ main{
 .article-header h4{
      color:  var(--back-color);
      font-size: 2rem;
+     margin: 15px 0;
+}
+
+.article-texte p{
+     margin: 5px 0;
 }
 
 .article-link{
      display: flex;
      flex-wrap: wrap;
      justify-content: center;
+     margin-top: 10px;
+}
+
+@media screen and (max-width:1000px) {
+     .article{
+          width: calc(33.33% - 40px);
+          margin: 30px 20px;
+     }
 }
 
 @media screen and (max-width:850px) {
+     header{
+          display: initial;
+     }
      ul{
           padding: 0;
           justify-content: center;
      }
      .logo-container{
           text-align: center;
+          padding-right: 40%;
      }
      .article-container{
           margin-top: 50px;
@@ -154,6 +184,17 @@ main{
 }
 
 @media screen and (max-width:550px) {
+     .logo-container{
+          margin-left: -30px;
+     }
+     .main-titre{
+          width: min-content;
+          margin-top: 10px;
+          right: 10px;
+     }
+     nav{
+          margin-top: 20px;
+     }
      ul{
           padding: 0;
           justify-content: center;

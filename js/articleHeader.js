@@ -12,7 +12,7 @@ export default class ArticleHeader {
     linkImg.href = `./photographe.html?id=${id}`;
     const img = document.createElement('img');
     img.src = `./images/PhotographersID/${nameImg}`;
-    img.alt = tag;
+    img.alt = `Profil de ${tag}`;
     linkImg.appendChild(img);
     const titre = document.createElement('h4');
     titre.innerText = tag;

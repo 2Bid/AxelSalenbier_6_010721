@@ -16,7 +16,7 @@
           <section class="photographe-infos">
                 <!-- LEFT -->
                <div class="photographe-infos-container">
-                    <h2 class="photographe-name" aria-label="nom du photographe"></h2>
+                    <h1 class="photographe-name" aria-label="nom du photographe"></h1>
                     <div>
                          <p class="photographe-city"></p>
                          <p class="photographe-line"></p>
@@ -34,17 +34,36 @@
                </div>
           </section>
 
-          <div class="tri-container">
-               <label for="select" class="tri-recherche">Trier par</label>
-               <select id="select" aria-label="trier les medias" role="listitem">
-                    <option class="option" aria-label="Popularité">Popularité</option>
-                    <option class="option" aria-label="Date">Date</option>
-                    <option class="option" aria-label="Titre">Titre</option>
-               </select>
+          <div class="dropdown-container">
+               <span class="tri-span">Trier par</span>
+               <div class="dropdown">
+                    <button class="btn-dropdown">
+                    <span class="dropdown-item1">Popularité</span>
+                    <svg fill="#f1f1f1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                         version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 407.437 407.437"
+                         style="enable-background:new 0 0 407.437 407.437;" xml:space="preserve">
+                         <polygon points="386.258,91.567 203.718,273.512 21.179,91.567 0,112.815 203.718,315.87 407.437,112.815 " />
+                    </svg>
+                    </button>
+                    <div class="bloc-links">
+                    <ul>
+                         <li>
+                              <a href="#" class="dropdown-item" aria-label="Trier par popularité">Popularité</a>
+                         </li>
+                         <li>
+                              <a href="#" class="dropdown-item"  aria-label="Trier par date">Date</a>
+                         </li>
+                         <li>
+                              <a href="#" class="dropdown-item"  aria-label="Trier par titre">Titre</a>
+                         </li>
+                    </ul>
+                    </div>
+               </div>
           </div>
 
 
-         <section class="media-container" aria-labelledby="Contenus visuel"></section>
+         <section class="media-container" aria-labelledby="Contenus visuel">
+         </section>
 
          <aside class="languette-info">
               <p class="total-like"></p>
@@ -55,27 +74,28 @@
      <!-- FORMULAIRE DE CONTACT -->
      <section class="form-modal" id="modal" aria-hidden="true"> 
           <form aria-labelledby="formulaire de contact">
-               <a href="#" class="form-close" role="button" aria-roledescription="Bouton de fermeture"><strong class="fas fa-times"></strong></a>
+               <a href="#" class="form-close" role="button" aria-roledescription="Bouton de fermeture">X</a>
                <h5 class="form-titre"></h5>
-               <label class="form-label" for="input-prenom" aria-label="prenom">
-                    Prenom
-               </label>
-               <input class="form-input" type="text" id="input-prenom" placeholder="Votre Pénom" required>
 
                <label class="form-label" for="input-nom" aria-label="nom">
                     Nom
                </label>
                <input class="form-input" type="text" id="input-nom" placeholder="Votre Nom" required>
+               <small class="input-error nom" id="input-error-nom">Veuillez entrer 2 caractères ou
+                    plus pour le champ du nom</small>
 
                <label class="form-label" for="input-mail" aria-label="email">
                     Email
                </label>
                <input class="form-input" id="input-mail" type="email" placeholder="Votre-adresse-email@gmail.com" required>
+               <small class="input-error mail" id="input-error-mail">Vous devez renseignez un
+                    email !</small>
 
                <label class="form-label" for="input-msg" aria-label="message" >
-                    Message
+                    Votre message
                </label>
                <input class="form-input form-input-msg" id="input-msg" placeholder="Votre message" type="text" required>
+               <small class="input-error msg" id="input-error-msg">Laissez moi un message</small>
                
                <button id="submit" class="form-submit" type="submit" aria-roledescription="soumettre le formulaire" role="button">Envoyer</button>
           </form>
@@ -96,7 +116,7 @@
                     <a href="#" class="next" role="button" aria-label="Bouton pour afficher le media suivant">&#10095;</a>
                </div>
      
-               <div class="media-titre"></div>
+               <legend class="media-titre"></legend>
                <div class="numbertext"></div>
           </div>
    </div>

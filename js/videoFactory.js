@@ -45,7 +45,6 @@ export default class MediaVideo {
     like.appendChild(datalike);
     like.appendChild(coeurcontainer);
     video.addEventListener('click', () => { openLightbox(this.params); window.scrollTo(0, 0); });
-    video.setAttribute('controls', 'true');
     videoContainer.appendChild(video);
     mediaVideo.appendChild(videoContainer);
     mediaInfo.appendChild(titre);
