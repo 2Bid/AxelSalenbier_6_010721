@@ -26,7 +26,7 @@ export default class MediaVideo {
     video.setAttribute('alt', this.params.title);
     const mediaInfo = document.createElement('div');
     mediaInfo.className = 'media-infos';
-    const titre = document.createElement('h4');
+    const titre = document.createElement('strong');
     titre.innerHTML = this.params.title;
     const like = document.createElement('span');
     const datalike = document.createElement('span');

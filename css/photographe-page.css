@@ -43,9 +43,6 @@ body{
      width: 100%;
 }
 
-h4{
-     margin: 0;
-}
 .main{
      max-width: 1940px;
      margin: auto;
@@ -247,7 +244,7 @@ a{
      white-space: nowrap;
 }
 
-.media-infos h4{
+.media-infos strong{
      width: 80%;
 }
 
@@ -265,6 +262,7 @@ a{
      max-width: 200px;
      min-width: 170px;
      border-radius: 5px 5px 0 0;
+     padding :10px 0;
      justify-content: space-around;
 }
 

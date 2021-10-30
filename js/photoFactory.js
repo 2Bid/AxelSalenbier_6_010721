@@ -29,7 +29,7 @@ export default class MediaPhoto {
     const mediaInfo = document.createElement('a');
     mediaInfo.href = '#';
     mediaInfo.className = 'media-infos';
-    const titre = document.createElement('h4');
+    const titre = document.createElement('strong');
     titre.innerHTML = this.params.title;
     const like = document.createElement('span');
     const datalike = document.createElement('span');

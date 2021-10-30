@@ -61,7 +61,7 @@ async function affichage(id) {
   const photographer = await getPhotographer(id);
   medias = await getMediaByPhotographer(id);
   new Photographe(photographer);
-  afficheMedias(medias);
+  triPopularite();
 }
 
 function recupereId() {
@@ -95,7 +95,6 @@ btnDrop.addEventListener('click', toggleDropDown);
 liItems.forEach((li) => li.addEventListener('click', toggleDropDown));
 
 /* filter medias */
-// const select = document.getElementById('select');
 
 function triDate() {
   document.querySelector('.dropdown-item1').innerText = 'Date';
@@ -115,24 +114,6 @@ function triTitre() {
   document.querySelector('.dropdown-item1').innerText = 'Titre';
 }
 
-// select.addEventListener('change', (e) => {
-//   switch (e.target.value) {
-//     case 'Date':
-//       triDate();
-//       break;
-
-//     case 'Popularité':
-//       triPopularite();
-//       break;
-
-//     case 'Titre':
-//       triTitre();
-//       break;
-
-//     default:
-//       break;
-//   }
-// });
 /* Dropdown */
 const ddItem = document.querySelectorAll('.dropdown-item');
 
