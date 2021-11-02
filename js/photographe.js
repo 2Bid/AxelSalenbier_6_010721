@@ -119,25 +119,24 @@ const ddItem = document.querySelectorAll('.dropdown-item');
 
 ddItem.forEach((item) => {
   item.addEventListener('click', (e) => {
+    const filterValue = document.querySelector('.dropdown-item1').innerText;
     switch (e.target.innerText) {
       case 'Date':
         e.preventDefault();
         triDate();
-        e.target.innerText = document.querySelector('.dropdown-item1').innerText;
+        e.target.innerText = filterValue;
         break;
 
       case 'Popularité':
         e.preventDefault();
         triPopularite();
-        e.target.innerText = document.querySelector('.dropdown-item1').innerText;
-        document.querySelector('.dropdown-item1').innerText = e.target.innerText;
+        e.target.innerText = filterValue;
         break;
 
       case 'Titre':
         e.preventDefault();
         triTitre();
-        e.target.innerText = document.querySelector('.dropdown-item1').innerText;
-        document.querySelector('.dropdown-item1').innerText = e.target.innerText;
+        e.target.innerText = filterValue;
         break;
 
       default:

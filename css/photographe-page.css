@@ -41,6 +41,8 @@ body{
 .logo{
      max-width : 500px;
      width: 100%;
+     position: relative;
+     left: -50px;
 }
 
 .main{
@@ -433,6 +435,16 @@ form{
           position: relative;
      }
 
+     .logo{
+          left: -28px;
+          width: auto;
+          max-width: 280px;
+     }
+
+     .dropdown-container{
+          display: none;
+     }
+
      .media{
           width: calc(100%);
           margin: 15px 0;
@@ -447,9 +459,6 @@ form{
 
      .languette-info{
           display: none;
-     }
-     .logo-container{
-          text-align: center;
      }
      .photographe-city,
      .photographe-name,
@@ -489,19 +498,22 @@ form{
      .bouton-container button{
           padding: 10px 15px;
      }
-     .lightbox{
-          top: 20%;
-     }
+     .lightbox,
      .form-modal{
-          top: 20%;
+          top: 10%;
+          width: 85vw;
      }
 }
 
 @media screen and (max-width: 550px){
-     .lightbox{
-          top: 10%;
+     .logo{
+          width: 80%;
+          left: -23px;
+          max-width: 250px;
      }
-     .form-modal{
+     .form-modal,
+     .lightbox{
           top: 12%;
+          width: 95vw;
      }
 }

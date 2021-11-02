@@ -188,10 +188,15 @@ main{
      .logo-container{
           margin-left: -30px;
      }
+     .logo{
+          width: 90%;
+          left: -10px;
+          position: relative;
+     }
      .main-titre{
-          width: min-content;
-          margin-top: 10px;
+          margin-top: 20px;
           right: 10px;
+          font-size: 19px;
      }
      nav{
           margin-top: 20px;
